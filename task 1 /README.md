@@ -1,4 +1,4 @@
-# 🐧 Linux CLI Basics - Lab Report
+.# 🐧 Linux CLI Basics - Lab Report
 
 ## 📖 Overview
 A foundational hands-on lab focused on mastering the core commands of the Linux terminal using the Bash shell. This module covers essential file system navigation, directory tree management, file inspection tools, and an overview of the Linux Filesystem Hierarchy Standard (FHS).
