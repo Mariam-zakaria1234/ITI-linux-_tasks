@@ -1,0 +1,88 @@
+#!/bin/bash
+
+echo "=========================================="
+echo "         MY FIRST LINUX DETECTIVE SCRIPT  "
+echo "=========================================="
+echo ""
+
+# 1. Shell name
+echo "1. Checking my current shell:"
+echo "Command: echo \$SHELL"
+echo -n "Output: "
+echo $SHELL
+echo "Notes: This shows the shell program I am using."
+echo "------------------------------------------"
+
+# 2. Shell PID
+echo "2. Finding current process ID (PID):"
+echo "Command: echo \$\$"
+echo -n "Output: "
+echo $$
+echo "Notes: This is the ID of my current terminal session."
+echo "------------------------------------------"
+
+# 3. Parent PID
+echo "3. Finding the Parent process ID:"
+echo "Command: echo \$PPID"
+echo -n "Output: "
+echo $PPID
+echo "Notes: The ID of the app that opened this terminal."
+echo "------------------------------------------"
+
+# 4. Username
+echo "4. Checking logged in user:"
+echo "Command: whoami"
+echo -n "Output: "
+whoami
+echo "Notes: Shows my current username."
+echo "------------------------------------------"
+
+# 5. Current location
+echo "5. Where am I right now?"
+echo "Command: pwd"
+echo -n "Output: "
+pwd
+echo "Notes: Prints my current directory path."
+echo "------------------------------------------"
+
+# 6. Home directory
+echo "6. My Home folder path:"
+echo "Command: echo \$HOME"
+echo -n "Output: "
+echo $HOME
+echo "Notes: Where my main personal files are saved."
+echo "------------------------------------------"
+
+# 7. Laptop Name
+echo "7. Machine name (Hostname):"
+echo "Command: hostname"
+echo -n "Output: "
+hostname
+echo "Notes: My computer name."
+echo "------------------------------------------"
+
+# 8. Login Shell
+echo "8. Checking default login shell:"
+echo "Command: getent passwd \$USER | cut -d: -f7"
+echo -n "Output: "
+getent passwd $USER | cut -d: -f7
+echo "Notes: Finds my login shell from system user details."
+echo "------------------------------------------"
+
+# 9. PATH variable
+echo "9. Folders where Linux looks for programs:"
+echo "Command: echo \$PATH"
+echo -n "Output: "
+echo $PATH
+echo "Notes: A list of folders containing commands."
+echo "------------------------------------------"
+
+# 10. Total Environment Variables
+echo "10. Counting system variables:"
+echo "Command: env | wc -l"
+echo -n "Output: "
+env | wc -l
+echo "Notes: Total number of active variables right now."
+echo "------------------------------------------"
+
+echo "Done running script!"
